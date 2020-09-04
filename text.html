@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 导入layui的样式 -->
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <!-- 导入本地自定义的样式 -->
+    <link rel="stylesheet" href="./assets/css/login.css">
+
 </head>
 <body>
-    <script>
-        var x='nihao'
-        console.log(x[0]);
-    </script>
+    <!-- 大事件logo -->
+    <div class="layui-main ">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+    <!-- 页面中间的主登录注册盒子 -->
+    <div class="box">
+        <div class="title-box"></div>
+            <form class="layui-form" action="" id='login'>
+                <div class="layui-form-item addpadding">
+                    <i class="layui-icon layui-icon-username" style="font-size: 30px;"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入姓名" autocomplete="off"
+                        class="layui-input">
+                </div>
+                <div class="layui-form-item addpadding">
+                    <i class="layui-icon layui-icon-password" style="font-size: 30px;"></i>
+                    <input type="text" name="password" required lay-verify="required|email" placeholder="请输入密码"
+                        class="layui-input">
+                </div>
+                <div class="layui-form-item addpadding">
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal " lay-submit
+                        lay-filter="formDemo">立即提交</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_reg">去注册账号</a>
+                </div>
+            </form>
 </body>
+<script src="./assets/lib/jquery.js"></script>
+<script src="./assets/lib/layui/layui.all.js"></script>
 </html>
