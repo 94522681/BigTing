@@ -28,8 +28,7 @@ function checkUserMsg() {
             $('.personName').html(name)
             if (res.data.user_pic) {
                 $('.img-avatar').show().attr('src', res.data.user_pic)
-                console.log( $('.img-avatar').attr('src'));
-                $('text-avatar').hide()
+                $('.text-avatar').hide()
             } else {
                 $('.img-avatar').hide()
                 $('.text-avatar').show().html(name[0].toUpperCase())
